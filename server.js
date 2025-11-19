@@ -8,7 +8,7 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 // Replace with your Aternos server IP and port
-const ATERNOS_HOST = "your.aternos.ip";
+const ATERNOS_HOST = ELAboys.aternos.me;
 const ATERNOS_PORT = 25565;
 
 wss.on('connection', (wsClient) => {
