@@ -7,8 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
-// Replace with your Aternos server IP and port
-const ATERNOS_HOST = ELAboys.aternos.me;
+const ATERNOS_HOST = "ELAboys.aternos.me";
 const ATERNOS_PORT = 25565;
 
 wss.on('connection', (wsClient) => {
@@ -28,8 +27,6 @@ wss.on('connection', (wsClient) => {
     proxy.close();
   });
 });
-// Trigger redeploy
-
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`WSS proxy running on port ${PORT}`);
